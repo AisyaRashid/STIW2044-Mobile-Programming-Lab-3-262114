@@ -312,7 +312,7 @@ class _UpdatePageState extends State<UpdatePage> {
     progressDialog.show();
 
     if(_image == null){
-    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/updateproduct.php"), 
+    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/update.php"), 
     body: {
       "prid": widget.product.prid,
       "prname": _prname,
@@ -344,7 +344,7 @@ class _UpdatePageState extends State<UpdatePage> {
     progressDialog.dismiss();
     }else{
     String base64Image = base64Encode(_image!.readAsBytesSync());
-    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/updateproduct.php"), 
+    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/update.php"), 
     body: {
       "prid": widget.product.prid,
       "prname": _prname,

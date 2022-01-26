@@ -319,7 +319,7 @@ class _AddPageState extends State<AddPage> {
     progressDialog.show();
 
     String base64Image = base64Encode(_image!.readAsBytesSync());
-    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/addproduct.php"), 
+    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/add.php"), 
     body: {
       "prname": _prname,
       "prdesc": _prdesc,

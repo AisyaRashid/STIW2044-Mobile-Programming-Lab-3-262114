@@ -124,7 +124,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   Future<void> _loadProducts() async {
-    var url = Uri.parse(MyConfig.server + "/lab3_26114/php/loadproduct.php");
+    var url = Uri.parse(MyConfig.server + "/lab3_26114/php/loadp.php");
     var response = await http.get(url);
     var rescode = response.statusCode;
     if(rescode == 200){

@@ -86,7 +86,7 @@ class _DeletePageState extends State<DeletePage> {
   }
 
   Future<void> _loadProducts() async {
-    var url = Uri.parse(MyConfig.server + "/lab3_26114/php/loadproduct.php");
+    var url = Uri.parse(MyConfig.server + "/lab3_26114/php/loadp.php");
     var response = await http.get(url);
     var rescode = response.statusCode;
     if(rescode == 200){
@@ -146,7 +146,7 @@ class _DeletePageState extends State<DeletePage> {
         message: const Text("Deleting product.."),
         title: const Text("Processing..."));
     progressDialog.show();
-    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/deleteproduct.php"),
+    http.post(Uri.parse(MyConfig.server + "/lab3_26114/php/delete.php"),
         body: {
           "prid": _productList[index]['prid'],
           
